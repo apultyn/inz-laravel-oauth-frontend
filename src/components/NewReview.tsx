@@ -44,8 +44,8 @@ export default function NewReview({ bookId, setIsNewReview }: NewReviewProps) {
         }
         setIsSubmitting(true);
         try {
-            await api.post(`/reviews`, {
-                book_id: bookId,
+            await api.post(`/reviews/`, {
+                bookId,
                 stars,
                 comment,
             });
